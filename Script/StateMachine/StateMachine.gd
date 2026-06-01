@@ -1,6 +1,6 @@
 extends Node3D
 
-## 角色的状态机
+## 角色的状态机1
 class_name StateMachine
 
 ## 默认状态
