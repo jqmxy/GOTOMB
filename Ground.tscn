@@ -44,7 +44,7 @@ adjustment_enabled = true
 [node name="Map1" type="Node3D" parent="." unique_id=197635427]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map1" unique_id=1871881990]
-transform = Transform3D(-0.86602354, -0.43301603, 0.25000072, 0, 0.49999818, 0.86602646, -0.5000033, 0.7499993, -0.4330102, -16.268604, 10.193631, 3.865797)
+transform = Transform3D(-0.32492808, 0.81903476, -0.4728677, 1.8199287e-08, 0.4999984, 0.8660265, 0.9457388, 0.2813963, -0.1624635, -16.296364, 10.257445, 3.8820782)
 light_energy = 0.65
 shadow_enabled = true
 
