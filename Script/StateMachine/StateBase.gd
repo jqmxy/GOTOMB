@@ -21,3 +21,4 @@ func process_update(delta: float) -> void:
 func physics_process_update(delta: float) -> void:
 	pass
 ##测试上传速度
+##主机推送笔记本
