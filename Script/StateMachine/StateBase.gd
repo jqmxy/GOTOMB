@@ -5,7 +5,7 @@ class_name StateBase
 
 var state_machine: StateMachine
 
-## 进入状态1111
+## 进入状态10086bxaiyudbauyibd
 func enter() -> void:
 	pass
 
