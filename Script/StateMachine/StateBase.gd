@@ -1,6 +1,6 @@
 extends Node3D
 
-## 基础状态
+## 基础状态111
 class_name StateBase
 
 var state_machine: StateMachine
