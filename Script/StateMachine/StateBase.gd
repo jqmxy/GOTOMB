@@ -1,11 +1,11 @@
 extends Node3D
 
-## 基础状态88888888
+## 基础状态
 class_name StateBase
 
 var state_machine: StateMachine
 
-## 进入状态10086bxaiyudbauyibd
+## 进入状态
 func enter() -> void:
 	pass
 
@@ -20,3 +20,4 @@ func process_update(delta: float) -> void:
 ## 物理帧触发
 func physics_process_update(delta: float) -> void:
 	pass
+##测试上传速度
