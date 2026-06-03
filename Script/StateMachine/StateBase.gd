@@ -1,11 +1,11 @@
 extends Node3D
 
-## 基础状态1231
+## 基础状态88888888
 class_name StateBase
 
 var state_machine: StateMachine
 
-## 进入状态
+## 进入状态1111
 func enter() -> void:
 	pass
 
