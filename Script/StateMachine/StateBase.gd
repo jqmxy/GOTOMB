@@ -20,4 +20,3 @@ func process_update(delta: float) -> void:
 ## 物理帧触发
 func physics_process_update(delta: float) -> void:
 	pass
-
