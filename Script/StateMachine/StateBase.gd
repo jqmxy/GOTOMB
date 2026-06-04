@@ -20,10 +20,4 @@ func process_update(delta: float) -> void:
 ## 物理帧触发
 func physics_process_update(delta: float) -> void:
 	pass
-##测试上传速度
-##主机推送笔记本
-##<<<<<<< 6/3work_test
-##分支测试------此为分支
-##=======
-##此为主机main
-##>>>>>>> main
+
