@@ -24,9 +24,7 @@ func physics_process_update(delta: float) -> void:
 		player.velocity.z = move_toward(player.velocity.z, 0, player.SPEED)
 	
 	if abs(player.velocity.x) + abs(player.velocity.z) > 0.1:
-		var characterDir = Vector2(player.velocity.z, player.velocity.x)
-		var target_quaternion:Quaternion = Quaternion.from_euler(Vector3(0, characterDir.angle(), 0))
-		player.character_rotation_root.quaternion = player.character_rotation_root.quaternion.slerp(target_quaternion, delta * 10)
+		player.face_camera_direction(delta)
 
 ## 攻击检测区域开启
 func hit_box_enable() -> void:

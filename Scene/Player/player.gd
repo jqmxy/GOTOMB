@@ -4,7 +4,7 @@ class_name Player
 
 @onready var character_rotation_root: Node3D = $CharacterRotationRoot
 @onready var character_skin: CharacterSkin = $CharacterRotationRoot/CharacterSkin
-@onready var camera_arm: SpringArm3D = $CameraArm
+@onready var camera_arm: CameraArm = $CameraArm
 @onready var state_machine: StateMachine = $StateMachine
 
 ## ---------Player属性 -----------
@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	# 获得方向
-	var _rotation:Quaternion = Quaternion.from_euler(Vector3(0, camera_arm.transform.basis.get_euler().y, 0))
+	var _rotation: Quaternion = Quaternion.from_euler(Vector3(0, camera_arm.get_camera_yaw(), 0))
 	direction = (_rotation * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	move_and_slide()
@@ -46,6 +46,11 @@ func _input(event: InputEvent) -> void:
 		state_machine.change_state("Jump")
 	if event.is_action_pressed("mouse_left"):
 		state_machine.change_state("Attack")
+
+
+func face_camera_direction(delta: float, turn_speed: float = 12.0) -> void:
+	var target_quaternion := Quaternion.from_euler(Vector3(0, camera_arm.get_camera_yaw() + PI, 0))
+	character_rotation_root.quaternion = character_rotation_root.quaternion.slerp(target_quaternion, clamp(delta * turn_speed, 0.0, 1.0))
 
 
 func _on_hit_box_body_entered(body: Node3D) -> void:

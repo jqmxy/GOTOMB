@@ -19,6 +19,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.890826, -19.6955)
 [node name="Enemy" parent="." unique_id=1043262045 instance=ExtResource("3_dkn02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.2289, 0, -20.4723)
 
+[node name="Enemy2" parent="." unique_id=1245439333 instance=ExtResource("3_dkn02")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2289, 0, -20.4723)
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=156434141]
 navigation_mesh = SubResource("NavigationMesh_xvqd6")
 
